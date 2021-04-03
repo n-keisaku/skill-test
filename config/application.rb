@@ -6,8 +6,6 @@ require "rails/all"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-
-
 module SkillTest
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -26,11 +24,11 @@ module SkillTest
       g.stylesheets false
       g.helper false
       g.test_framework :rspec,
-                        view_specs: false,
-                        routing_specs: false,
-                        helper_specs: false,
-                        controller_specs: false,
-                        request_specs: true
+                       view_specs: false,
+                       routing_specs: false,
+                       helper_specs: false,
+                       controller_specs: false,
+                       request_specs: true
     end
   end
 end
