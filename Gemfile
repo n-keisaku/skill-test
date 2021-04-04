@@ -45,7 +45,7 @@ group :development do
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
   gem "listen", "~> 3.3"
-  gem "rack-mini-profiler", "~> 2.0"
+  gem "rack-mini-profiler", "~> 2.0", require: false
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem "annotate"
   gem "spring"
@@ -64,3 +64,5 @@ gem "bootstrap", "~> 4.1.1"
 gem "devise"
 gem "jquery-rails"
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'rails-i18n', '~> 6.0'
+gem 'devise-i18n'
