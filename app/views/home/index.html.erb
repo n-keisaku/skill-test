@@ -1,10 +1,21 @@
-<h1>スキルテストアプリ</h1>
-<p><%= current_user.email %>でログインしています。</p>
-<nav>
-  <% if user_signed_in? %>
-  <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
-  <% else %>
-  <%= link_to 'サインアップ', new_user_registration_path %>
-  <%= link_to 'ログイン', new_user_session_path %>
-  <% end %>
-</nav>
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="/">スキルテストアプリ</a>
+      <div>
+        <% if user_signed_in? %>
+        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class:"btn btn-outline-danger"%>
+        <% else %>
+        <%= link_to 'サインアップ', new_user_registration_path %>
+        <%= link_to 'ログイン', new_user_session_path %>
+        <% end %>
+      </div>
+  </nav>
+  </div>
+  <div class="container mt-5">
+    <p><%= current_user.email %>でログインしています。</p>
+  </div>
+
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <div class="alert alert-success" role="alert">
+  </div>
