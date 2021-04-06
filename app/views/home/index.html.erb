@@ -1,21 +1,25 @@
-  <nav class="navbar navbar-dark bg-dark">
-    <div class="container">
-      <a class="navbar-brand" href="/">スキルテストアプリ</a>
-      <div>
-        <% if user_signed_in? %>
-        <%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class:"btn btn-outline-danger"%>
-        <% else %>
-        <%= link_to 'サインアップ', new_user_registration_path %>
-        <%= link_to 'ログイン', new_user_session_path %>
-        <% end %>
-      </div>
-  </nav>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">スキルテストアプリ</a>
+    <div>
+      <% if user_signed_in? %>
+      <%= link_to 'ログアウト', destroy_user_session_path, method: :delete ,class:"btn btn-outline-danger"%>
+      <% else %>
+      <%= link_to 'サインアップ', new_user_registration_path %>
+      <%= link_to 'ログイン', new_user_session_path %>
+      <% end %>
+    </div>
   </div>
-  <div class="container mt-5">
-    <p><%= current_user.email %>でログインしています。</p>
-  </div>
+</nav>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-  <div class="alert alert-success" role="alert">
+<% if flash[:notice] %>
+<div class="alert alert-success">
+  <div class="container">
+    <%= flash[:notice] %>
   </div>
+</div>
+<% end %>
+
+<div class="container mt-5 ">
+  <p><%= current_user.email %>でログインしています。</p>
+</div>
