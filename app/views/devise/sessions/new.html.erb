@@ -1,8 +1,14 @@
+<% if flash[:notice] %>
+<div class="alert alert-success">
+  <div class="container">
+    <%= flash[:notice] %>
+  </div>
+</div>
+<% end %>
+
 <div class="container mt-5">
   <div class="mx-auto" style="max-width: 500px;">
     <h2 class="mb-4">ログイン</h2>
-
-
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="form-group">
